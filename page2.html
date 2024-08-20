@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Compra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Detalhes da Compra</h1>
+        <p>Você selecionou <strong><span id="ticketQuantity"></span> ingresso(s)</strong>.</p>
+        <p>Valor total: <strong><span id="totalPrice"></span>€</strong></p>
+        <p>Para finalizar sua compra, por favor, faça o pagamento manualmente via MBWay para o seguinte número:</p>
+        <p><strong>Número MBWay: <span id="mbwayNumber">927 994 525</span></strong></p>
+        <p>Após finalizar o envio, toque no botão abaixo para confirmar.</p>
+        <form action="page3.html" method="get">
+            <button type="submit">Confirmar Pagamento</button>
+        </form>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const ticketQuantity = urlParams.get('ticketQuantity');
+        const pricePerTicket = 5;
+        const totalPrice = ticketQuantity * pricePerTicket;
+
+        document.getElementById('ticketQuantity').innerText = ticketQuantity;
+        document.getElementById('totalPrice').innerText = totalPrice;
+    </script>
+</body>
+</html>
