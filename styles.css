@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #ff6f61, #de1a1a);
+    background: linear-gradient(60deg, #a50000, #b74242);
     color: #333;
     margin: 0;
     padding: 0;
@@ -42,8 +42,16 @@ h1 {
 
 p {
     font-size: 1em;
-    line-height: 1.2;
+    line-height: 1.3;
     color: #171616;
+}
+
+p2 {
+    font-size: 1em;
+    line-height: 1.4;
+    color: #171616;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 p.bold-text {
@@ -96,7 +104,7 @@ button {
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background: linear-gradient(135deg, #ff6f61, #d92323);
+    background: linear-gradient(1000deg, #a50000, #b74242);
     color: #fff;
     border: none;
     border-radius: 15px;
@@ -108,7 +116,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(135deg, #d92323, #ff6f61);
+    background: linear-gradient(1000deg, #b74242, #a50000);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -137,7 +145,7 @@ a.button {
     width: 50%;
     padding: 15px;
     margin-top: 20px;
-    background: linear-gradient(135deg, #ff6f61, #d92323);
+    background: linear-gradient(1000deg, #a50000, #b74242);
     color: #fff;
     border: none;
     border-radius: 15px;
@@ -151,7 +159,7 @@ a.button {
 }
 
 a.button:hover {
-    background: linear-gradient(135deg, #d92323, #ff6f61);
+    background: linear-gradient(1000deg, #b74242, #a50000);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -229,7 +237,7 @@ a.button:hover {
 
 .navbar ul li a {
     text-decoration: none;
-    color: #d92323;
+    color: #a50000;
     font-weight: 800;
     font-size: 0.8em;
     transition: color 0.3s ease;
@@ -237,7 +245,7 @@ a.button:hover {
 }
 
 .navbar ul li a:hover {
-    color: #ff6f61;
+    color: #000000;
 }
 
 /* Ajustar o espaço abaixo do menu para evitar sobreposição */
@@ -286,7 +294,7 @@ body {
 }
 
 h2 {
-    color: #d92323; /* Cor do texto semelhante ao h1 */
+    color: #b74242; /* Cor do texto semelhante ao h1 */
     font-size: 1.2em; /* Tamanho da fonte menor que h1 */
     margin-bottom: 15px; /* Espaçamento inferior para separar do conteúdo abaixo */
     font-weight: 800; /* Peso da fonte */
@@ -294,3 +302,12 @@ h2 {
     text-align: center; /* Alinhamento do texto */
 }
 
+
+h3 {
+    color: #b74242; /* Cor do texto semelhante ao h1 */
+    font-size: 1.2em; /* Tamanho da fonte menor que h1 */
+    margin-bottom: 12px; /* Espaçamento inferior para separar do conteúdo abaixo */
+    font-weight: 800; /* Peso da fonte */
+    line-height: 0.5; /* Altura da linha para melhor legibilidade */
+    text-align: center; /* Alinhamento do texto */
+}
