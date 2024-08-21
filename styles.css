@@ -270,7 +270,15 @@ body {
 }
 
 .icon-button.email:hover {
-    background-color: #B71C1C; /* Darker Email color on hover */
+    background-color: #fffafa; /* Darker Email color on hover */
+}
+
+.icon-button.instagram {
+    background-color: #E1306C; /* Email color */
+}
+
+.icon-button.instagram:hover {
+    background-color: #fffafa; /* Darker Email color on hover */
 }
 
 .icon-button i {
