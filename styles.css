@@ -30,7 +30,7 @@ body {
 
 h1 {
     color: #d92323;
-    font-size: 2.5em;
+    font-size: 2.0em;
     margin-bottom: 10px;
 }
 
@@ -57,6 +57,41 @@ p i {
     color: #d92323;
 }
 
+/* Estilo personalizado para a caixa de escolha de ingressos */
+select {
+    width: 40%;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    border: 2px solid #d92323;
+    border-radius: 15px;
+    font-size: 1.2em;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    appearance: none; /* Remove a aparência padrão */
+    -webkit-appearance: none; /* Remove a aparência padrão no Safari/Chrome */
+    -moz-appearance: none; /* Remove a aparência padrão no Firefox */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23d92323" d="M2 0L0 2h4zM0 3l2 2 2-2z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 10px 10px;
+}
+
+select:hover {
+    border-color: #ff6f61;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+select option {
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: 400;
+    padding: 15px;
+}
+
+/* Estilo para o botão */
 button {
     width: 100%;
     padding: 15px;
@@ -78,23 +113,47 @@ button:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilo para links (Localização) */
 a {
-    display: inline-block;
-    margin-top: 1px;
-    color: #d92323;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 10px 10px;
-    border-radius: 15px;
-    background-color: #f9f9f9;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    color: #171616; /* Cor do texto */
+    font-weight: 600; /* Peso da fonte */
+    text-decoration: underline; /* Texto sublinhado */
+    padding: 0; /* Remover o padding para ficar apenas texto */
+    background-color: transparent; /* Remover o fundo */
+    box-shadow: none; /* Remover a sombra */
+    transition: none; /* Remover a transição */
 }
 
 a:hover {
-    background-color: #d92323;
+    background-color: transparent; /* Remover a alteração de fundo ao passar o mouse */
+    color: #d92323; /* Cor do texto ao passar o mouse */
+    transform: none; /* Remover o efeito de transformação */
+}
+
+/* Estilo específico para o botão "Enviar Dados" */
+a.button {
+    display: block; /* Garante que o botão ocupe a largura total */
+    align-content: center
+    width: 50%;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ff6f61, #d92323);
     color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center; /* Centraliza o texto dentro do botão */
+    text-decoration: none; /* Remove sublinhado */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+a.button:hover {
+    background: linear-gradient(135deg, #d92323, #ff6f61);
     transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fadeIn {
@@ -117,3 +176,113 @@ a:hover {
         font-size: 1em;
     }
 }
+
+.secure-message {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.6); /* Cor com pouca transparência */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo com pouca transparência */
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.secure-message i {
+    margin-right: 5px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Menu Superior Flutuante */
+.navbar {
+    position: fixed;
+    top: 20px; /* Adiciona 20px de espaço entre o topo e o menu */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 40px; /* Aumenta o padding horizontal para evitar quebra de linha */
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Espaça os itens de forma uniforme */
+    gap: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px; /* Aumenta o espaço entre os links para evitar quebra de linha */
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #d92323;
+    font-weight: 800;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Garante que o texto não quebre para a próxima linha */
+}
+
+.navbar ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Ajustar o espaço abaixo do menu para evitar sobreposição */
+body {
+    padding-top: 100px; /* Ajustar conforme necessário para evitar sobreposição com o conteúdo */
+}
+
+.contact-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon-button {
+    display: inline-block;
+    padding: 15px;
+    background-color: #25D366; /* WhatsApp color */
+    border-radius: 50%;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.icon-button.email {
+    background-color: #D92323; /* Email color */
+}
+
+.icon-button.email:hover {
+    background-color: #B71C1C; /* Darker Email color on hover */
+}
+
+.icon-button i {
+    line-height: 30px; /* Center the icon vertically */
+}
+
+h2 {
+    color: #d92323; /* Cor do texto semelhante ao h1 */
+    font-size: 1.2em; /* Tamanho da fonte menor que h1 */
+    margin-bottom: 15px; /* Espaçamento inferior para separar do conteúdo abaixo */
+    font-weight: 800; /* Peso da fonte */
+    line-height: 0.5; /* Altura da linha para melhor legibilidade */
+    text-align: center; /* Alinhamento do texto */
+}
+
