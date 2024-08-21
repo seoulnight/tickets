@@ -18,6 +18,9 @@
             <button type="submit">Confirmar Pagamento</button>
         </form>
     </div>
+    <div class="secure-message">
+        <i class="fa fa-lock"></i> Website Seguro
+    </div>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const ticketQuantity = urlParams.get('ticketQuantity');
@@ -27,5 +30,14 @@
         document.getElementById('ticketQuantity').innerText = ticketQuantity;
         document.getElementById('totalPrice').innerText = totalPrice;
     </script>
+    <div class="navbar">
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre o Evento</a></li>
+        <li><a href="comofunciona.html">Como Funciona</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</div>
+
 </body>
 </html>
