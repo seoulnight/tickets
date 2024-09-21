@@ -4,10 +4,11 @@
 /* Fontes Google */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
+/* Corpo da página */
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(60deg, #a50000, #b74242);
-    color: #333;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,40 +17,44 @@ body {
     min-height: 100vh;
 }
 
+/* Container principal */
 .container {
     width: 90%;
     max-width: 500px;
     margin: 20px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #10396e; /* Cor principal */
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-    animation: fadeIn 1s ease-in-out;
 }
 
-h1 {
-    color: #d92323;
-    font-size: 2.0em;
+/* Títulos */
+h1, h2, h3 {
+    color: #fff; /* Texto branco */
     margin-bottom: 10px;
 }
 
+h1 {
+    font-size: 2.0em;
+}
+
+h2, h3 {
+    font-size: 1.2em;
+}
+
+/* Imagens do evento */
 .event-image {
     width: 100%;
     border-radius: 15px;
     margin-bottom: 10px;
 }
 
-p {
-    font-size: 1em;
-    line-height: 1.3;
-    color: #171616;
-}
-
-p2 {
+/* Parágrafos */
+p, p2 {
     font-size: 1em;
     line-height: 1.4;
-    color: #171616;
+    color: #fff;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -57,55 +62,53 @@ p2 {
 p.bold-text {
     font-size: 1.3em;
     font-weight: 600;
-    color: #d92323;
+    color: #77b2ff; /* Destaque com o azul claro */
 }
 
 p i {
     margin-right: 8px;
-    color: #d92323;
+    color: #77b2ff; /* Ícones destacados com o azul claro */
 }
 
-/* Estilo personalizado para a caixa de escolha de ingressos */
+/* Estilo dos seletores */
 select {
     width: 40%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #f9f9f9;
-    border: 2px solid #d92323;
+    background-color: #10396e;
+    border: 2px solid #77b2ff; /* Borda azul claro */
     border-radius: 15px;
     font-size: 1.0em;
-    color: #333;
+    color: #fff;
     cursor: pointer;
-    transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    appearance: none; /* Remove a aparência padrão */
-    -webkit-appearance: none; /* Remove a aparência padrão no Safari/Chrome */
-    -moz-appearance: none; /* Remove a aparência padrão no Firefox */
-    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23d92323" d="M2 0L0 2h4zM0 3l2 2 2-2z"/></svg>');
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%2377b2ff" d="M2 0L0 2h4zM0 3l2 2 2-2z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 15px top 50%;
     background-size: 10px 10px;
 }
 
 select:hover {
-    border-color: #ff6f61;
+    border-color: #77b2ff; /* Azul claro no hover */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Opções dentro dos seletores */
 select option {
-    background-color: #f9f9f9;
-    color: #333;
-    font-weight: 400;
+    background-color: #10396e;
+    color: #fff;
     padding: 15px;
 }
 
-/* Estilo para o botão */
-button {
+/* Botões */
+button, a.button {
     font-family: 'Montserrat', sans-serif;
-    width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background: linear-gradient(1000deg, #a50000, #b74242);
+    width: 90%; /* Corrigido para evitar que saia do container */
+    max-width: 100%; /* Garante que o botão não ultrapasse o tamanho do container */
+    background: linear-gradient(1000deg, #10396e, #0a58be); /* Gradiente azul escuro */
     color: #fff;
     border: none;
     border-radius: 15px;
@@ -116,66 +119,100 @@ button {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
-    background: linear-gradient(1000deg, #b74242, #a50000);
+button:hover, a.button:hover {
+    background: linear-gradient(1000deg, #0a58be, #10396e); /* Gradiente invertido */
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo para links (Localização) */
-a {
-    color: #171616; /* Cor do texto */
-    font-weight: 600; /* Peso da fonte */
-    text-decoration: underline; /* Texto sublinhado */
-    padding: 0; /* Remover o padding para ficar apenas texto */
-    background-color: transparent; /* Remover o fundo */
-    box-shadow: none; /* Remover a sombra */
-    transition: none; /* Remover a transição */
-}
-
-a:hover {
-    background-color: transparent; /* Remover a alteração de fundo ao passar o mouse */
-    color: #d92323; /* Cor do texto ao passar o mouse */
-    transform: none; /* Remover o efeito de transformação */
 }
 
 /* Estilo específico para o botão "Enviar Dados" */
 a.button {
-    display: block; /* Garante que o botão ocupe a largura total */
-    align-content: center
-    width: 50%;
-    padding: 15px;
-    margin-top: 20px;
-    background: linear-gradient(1000deg, #a50000, #b74242);
-    color: #fff;
-    border: none;
-    border-radius: 15px;
-    font-size: 1.2em;
-    font-weight: 600;
+    display: block;
+    margin: 20px auto; /* Adiciona espaçamento em cima e embaixo do botão */
     text-align: center; /* Centraliza o texto dentro do botão */
     text-decoration: none; /* Remove sublinhado */
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-a.button:hover {
-    background: linear-gradient(1000deg, #b74242, #a50000);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+/* Links (Localização e Navegação) */
+a {
+    color: #77b2ff; /* Azul claro */
+    font-weight: 600;
+    text-decoration: underline;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+a:hover {
+    color: #fff;
 }
 
+/* Menu Superior Flutuante */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Transparência no menu */
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap; /* Garante que os links não quebrem */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 15px; /* Adiciona espaço entre os links */
+}
+
+.navbar ul li:last-child {
+    margin-right: 0; /* Remove a margem do último item */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff; /* Letras do menu flutuante em branco */
+    font-weight: 800;
+    font-size: 0.8em;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Garante que o texto dos links não quebre */
+}
+
+.navbar ul li a:hover {
+    color: #77b2ff; /* Azul claro no hover */
+}
+
+/* Estilo de segurança */
+.secure-message {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7); /* Cor do texto com transparência */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo com transparência */
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.secure-message i {
+    margin-right: 5px;
+    color: #77b2ff; /* Ícone de segurança com o azul claro */
+}
+
+/* Estilo responsivo */
 @media (max-width: 500px) {
     h1 {
         font-size: 2em;
@@ -186,85 +223,25 @@ a.button:hover {
     }
 }
 
-.secure-message {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.9em;
-    color: rgba(0, 0, 0, 0.6); /* Cor com pouca transparência */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.7); /* Fundo com pouca transparência */
-    padding: 5px 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.secure-message i {
-    margin-right: 5px;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-/* Menu Superior Flutuante */
-.navbar {
-    position: fixed;
-    top: 20px; /* Adiciona 20px de espaço entre o topo e o menu */
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px 20px; /* Aumenta o padding horizontal para evitar quebra de linha */
-    border-radius: 25px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between; /* Espaça os itens de forma uniforme */
-    gap: 20px;
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px; /* Aumenta o espaço entre os links para evitar quebra de linha */
-}
-
-.navbar ul li {
-    display: inline;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: #a50000;
-    font-weight: 800;
-    font-size: 0.8em;
-    transition: color 0.3s ease;
-    white-space: nowrap; /* Garante que o texto não quebre para a próxima linha */
-}
-
-.navbar ul li a:hover {
-    color: #000000;
-}
-
-/* Ajustar o espaço abaixo do menu para evitar sobreposição */
-body {
-    padding-top: 100px; /* Ajustar conforme necessário para evitar sobreposição com o conteúdo */
-}
-
+/* Botões de ícones */
 .contact-buttons {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+}
+
+.contact-buttons a {
+    margin-right: 20px; /* Adiciona espaçamento entre os botões */
+}
+
+.contact-buttons a:last-child {
+    margin-right: 0; /* Remove a margem do último item */
 }
 
 .icon-button {
     display: inline-block;
     padding: 15px;
-    background-color: #25D366; /* WhatsApp color */
+    background-color: #10396e;
     border-radius: 50%;
     color: white;
     font-size: 2em;
@@ -274,41 +251,14 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.icon-button.email {
-    background-color: #D92323; /* Email color */
-}
-
-.icon-button.email:hover {
-    background-color: #fffafa; /* Darker Email color on hover */
+.icon-button.whatsapp {
+    background-color: #25D366;
 }
 
 .icon-button.instagram {
-    background-color: #E1306C; /* Email color */
+    background-color: #E1306C;
 }
 
-.icon-button.instagram:hover {
-    background-color: #fffafa; /* Darker Email color on hover */
-}
-
-.icon-button i {
-    line-height: 30px; /* Center the icon vertically */
-}
-
-h2 {
-    color: #b74242; /* Cor do texto semelhante ao h1 */
-    font-size: 1.2em; /* Tamanho da fonte menor que h1 */
-    margin-bottom: 15px; /* Espaçamento inferior para separar do conteúdo abaixo */
-    font-weight: 800; /* Peso da fonte */
-    line-height: 0.5; /* Altura da linha para melhor legibilidade */
-    text-align: center; /* Alinhamento do texto */
-}
-
-
-h3 {
-    color: #b74242; /* Cor do texto semelhante ao h1 */
-    font-size: 1.2em; /* Tamanho da fonte menor que h1 */
-    margin-bottom: 12px; /* Espaçamento inferior para separar do conteúdo abaixo */
-    font-weight: 800; /* Peso da fonte */
-    line-height: 0.5; /* Altura da linha para melhor legibilidade */
-    text-align: center; /* Alinhamento do texto */
+.icon-button.email {
+    background-color: #0a58be;
 }
