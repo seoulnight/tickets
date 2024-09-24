@@ -7,7 +7,7 @@
 /* Corpo da página */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #000; /* Fundo preto */
+    background-color: #fd7521; /* Fundo preto */
     color: #fff; /* Texto branco */
     margin: 0;
     padding: 0;
@@ -23,7 +23,7 @@ body {
     max-width: 500px;
     margin: 20px;
     padding: 20px;
-    background-color: #10396e; /* Cor principal */
+    background-color: #ab116b; /* Cor principal */
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -62,12 +62,12 @@ p, p2 {
 p.bold-text {
     font-size: 1.3em;
     font-weight: 600;
-    color: #77b2ff; /* Destaque com o azul claro */
+    color: #fd7521; /* Destaque com o novo laranja */
 }
 
 p i {
     margin-right: 8px;
-    color: #77b2ff; /* Ícones destacados com o azul claro */
+    color: #fd7521; /* Ícones destacados com o novo laranja */
 }
 
 /* Estilo dos seletores */
@@ -75,28 +75,28 @@ select {
     width: 40%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #10396e;
-    border: 2px solid #77b2ff; /* Borda azul claro */
+    background-color: #ab116b;
+    border: 2px solid #fd7521; /* Borda laranja */
     border-radius: 15px;
     font-size: 1.0em;
     color: #fff;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%2377b2ff" d="M2 0L0 2h4zM0 3l2 2 2-2z"/></svg>');
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23fd7521" d="M2 0L0 2h4zM0 3l2 2 2-2z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 15px top 50%;
     background-size: 10px 10px;
 }
 
 select:hover {
-    border-color: #77b2ff; /* Azul claro no hover */
+    border-color: #fd7521; /* Laranja no hover */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Opções dentro dos seletores */
 select option {
-    background-color: #10396e;
+    background-color: #ab116b;
     color: #fff;
     padding: 15px;
 }
@@ -108,7 +108,7 @@ button, a.button {
     margin-top: 20px;
     width: 90%; /* Corrigido para evitar que saia do container */
     max-width: 100%; /* Garante que o botão não ultrapasse o tamanho do container */
-    background: linear-gradient(1000deg, #10396e, #0a58be); /* Gradiente azul escuro */
+    background: linear-gradient(1000deg, #ab116b, #fd7521); /* Gradiente atualizado */
     color: #fff;
     border: none;
     border-radius: 15px;
@@ -120,7 +120,7 @@ button, a.button {
 }
 
 button:hover, a.button:hover {
-    background: linear-gradient(1000deg, #0a58be, #10396e); /* Gradiente invertido */
+    background: linear-gradient(1000deg, #fd7521, #ab116b); /* Gradiente invertido */
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -135,7 +135,7 @@ a.button {
 
 /* Links (Localização e Navegação) */
 a {
-    color: #77b2ff; /* Azul claro */
+    color: #fd7521; /* Laranja */
     font-weight: 600;
     text-decoration: underline;
 }
@@ -187,7 +187,7 @@ a:hover {
 }
 
 .navbar ul li a:hover {
-    color: #77b2ff; /* Azul claro no hover */
+    color: #fd7521; /* Laranja no hover */
 }
 
 /* Estilo de segurança */
@@ -209,7 +209,7 @@ a:hover {
 
 .secure-message i {
     margin-right: 5px;
-    color: #77b2ff; /* Ícone de segurança com o azul claro */
+    color: #fd7521; /* Ícone de segurança com o novo laranja */
 }
 
 /* Estilo responsivo */
@@ -241,7 +241,7 @@ a:hover {
 .icon-button {
     display: inline-block;
     padding: 15px;
-    background-color: #10396e;
+    background-color: #ab116b;
     border-radius: 50%;
     color: white;
     font-size: 2em;
@@ -260,5 +260,5 @@ a:hover {
 }
 
 .icon-button.email {
-    background-color: #0a58be;
+    background-color: #fd7521;
 }
